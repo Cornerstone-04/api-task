@@ -1,0 +1,22 @@
+#btn-div{
+    background-color: rgb(70, 20, 189);
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+
+#btn-div button{
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#display{
+    display: block;
+}
+
+#display div{
+    margin: 10px;
+    padding: 5px;
+}
+
