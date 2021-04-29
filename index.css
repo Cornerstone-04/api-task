@@ -26,13 +26,13 @@
 }
 
 .card ul{
-    background-color: rgba(128, 128, 128, 0.24);
+    background: linear-gradient(145deg, rgb(224, 224, 224), rgb(95, 95, 95));
     padding: 10px;
     list-style: none;
     text-align: center;
     border: none;
     border-radius: 10px;
-    box-shadow: 2px 3px 2px black;
+    box-shadow: black 2px 3px 4px ;
     font-weight: bolder;
 }
 
@@ -46,6 +46,7 @@
 
 .card ul li:nth-child(4){
     color: blue;
+    text-transform: lowercase;
 }
 
 .card ul li:nth-child(2):hover, .card ul li:nth-child(3):hover, .card ul li:nth-child(4):hover{
@@ -55,4 +56,73 @@
 
 .todo-list{
     display: inline-block;
+    font-size: small;
+}
+
+.todo-list ul {
+    background: linear-gradient(45deg, hotpink, rgb(170, 73, 73));
+    padding: 10px;
+    list-style: none;
+    text-transform: capitalize;
+    border: 1px black solid;
+    border-radius: 8px;
+    box-shadow: black 2px 3px 4px ;
+}
+
+.album-list{
+    display: inline-block;
+}
+
+.album-list ul{
+    background: linear-gradient(145deg, rgb(94, 179, 94), rgb(13, 201, 13));
+    padding: 10px;
+    margin: none;
+    border: 1px black solid;
+    list-style: none;
+    text-transform: capitalize;
+    border-radius: 8px;
+    box-shadow: black 2px 3px 4px ;
+}
+
+.album-list ul li:nth-child(1){
+    font-weight: bold;
+    color: rgba(5, 5, 131, 0.904);
+}
+
+.comments-list{
+    display: grid;
+}
+
+.comments-list ul{
+    background: linear-gradient(145deg, rgba(255, 153, 1, 0.767), rgb(241, 245, 8));
+    padding: 10px;
+    border: 1px black solid;
+    list-style: none;
+    text-transform: capitalize;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: black 2px 3px 4px ;
+}
+
+.comments-list ul li:nth-child(2), .comments-list ul li:nth-child(3){
+    font-weight: bold;
+    color: rgba(5, 5, 131, 0.904);
+}
+
+.posts-list{
+    display: inline-block;
+    justify-self: self-;
+}
+
+.posts-list ul{
+    font-size: smaller;
+    background: linear-gradient(145deg, rgba(221, 18, 240, 0.767), rgb(206, 0, 51));
+    padding: 10px;
+    border: 1px black solid;
+    list-style: none;
+    text-transform: capitalize;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: black 2px 3px 4px ;
+
 }
