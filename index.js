@@ -31,29 +31,52 @@ function myAlbums() {
 function myPhotos() {
     fetch('https://jsonplaceholder.typicode.com/photos')
     .then((response) => response.json())
-    .then((ouput) => {
-        // console.log(JSON)
+    .then((data) => {
+        console.log(data)
         document.getElementById('head4').innerHTML = 'Photos';
-        document.getElementById('result4').innerHTML = JSON.stringify(ouput);
+        document.getElementById('result4').innerHTML = JSON.stringify(data);
     });
 };
 
 function myTodos() {
     fetch('https://jsonplaceholder.typicode.com/todos')
     .then((response) => response.json())
-    .then((ouput) => {
-        // console.log(JSON)
+    .then((data) => {
+        console.log(data)
+        let todos = '';
+        data.forEach(element => {
+            todos += `<div class="todo-list">
+            <ul>
+                <li>${element.completed}</li>
+                <li>${element.id}</li>
+                <li>${element.title}</li>
+                <li>${element.userid}</li>
+            </ul>
+            </div>`
         document.getElementById('head5').innerHTML = 'ToDos';
-        document.getElementById('result5').innerHTML = JSON.stringify(ouput);
+        document.getElementById('result5').innerHTML = todos;
+        });
     });
 };
 
 function myUsers() {
     fetch('https://jsonplaceholder.typicode.com/users')
-    .then((response) => response.json())
-    .then((ouput) => {
-        // console.log(JSON)
+    .then(response => response.json())
+    .then(data => {
+       let users = '';
+        data.forEach(element => {
+            users += `<div class="card">
+            <ul>
+                <li>${element.name}</li>
+                <li>${element.phone}</li>
+                <li >${element.website}</li>
+                <li>${element.email}</li>
+                <li>${element.address.street}</li>
+                <li>${element.company.name}</li>
+            </ul>
+            </div>`
         document.getElementById('head6').innerHTML = 'Users';
-        document.getElementById('result6').innerHTML = JSON.stringify(ouput);
+        document.getElementById('result6').innerHTML = users;
+        });
     });
 };
