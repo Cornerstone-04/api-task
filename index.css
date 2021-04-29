@@ -12,6 +12,10 @@
     cursor: pointer;
 }
 
+#btn-div button:hover{
+    background-color: #726c6c8f;
+}
+
 #display{
     display: block;
 }
