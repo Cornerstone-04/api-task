@@ -1,5 +1,5 @@
 function myPosts() {
-    fetch('https://jsonplaceholder.typicode.com/posts/1')
+    fetch('https://jsonplaceholder.typicode.com/posts')
     .then((response) => response.json())
     .then((data) => {
         console.log(data)
@@ -20,7 +20,7 @@ function myPosts() {
 };
 
 function myComments() {
-    fetch('https://jsonplaceholder.typicode.com/comments/1')
+    fetch('https://jsonplaceholder.typicode.com/comments')
     .then((response) => response.json())
     .then((data) => {
         console.log(data)
@@ -42,7 +42,7 @@ function myComments() {
 };
 
 function myAlbums() {
-    fetch('https://jsonplaceholder.typicode.com/albums/1')
+    fetch('https://jsonplaceholder.typicode.com/albums')
     .then((response) => response.json())
     .then((data) => {
         let albums = '';
@@ -61,18 +61,19 @@ function myAlbums() {
 };
 
 function myPhotos() {
-    fetch('https://jsonplaceholder.typicode.com/photos/1')
+    fetch('https://jsonplaceholder.typicode.com/photos')
     .then((response) => response.json())
     .then((data) => {
         console.log(data)
         let photos = '';
         data.forEach(element => {
-            photos += `<div class="todo-list">
+            photos += `<div class="photo-list">
             <ul>
-                <li>${element.completed}</li>
+                <li>${element.albumid}</li>
                 <li>${element.id}</li>
                 <li>${element.title}</li>
-                <li>${element.userid}</li>
+                <li><img src="${element.thumbnailurl}"></li>
+                <li><img src="${element.url}"></li>
             </ul>
             </div>`
         document.getElementById('head4').innerHTML = 'Photos';
@@ -82,7 +83,7 @@ function myPhotos() {
 };
 
 function myTodos() {
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
+    fetch('https://jsonplaceholder.typicode.com/todos')
     .then((response) => response.json())
     .then((data) => {
         let todos = '';
@@ -102,7 +103,7 @@ function myTodos() {
 };
 
 function myUsers() {
-    fetch('https://jsonplaceholder.typicode.com/users/1')
+    fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(data => {
        let users = '';
